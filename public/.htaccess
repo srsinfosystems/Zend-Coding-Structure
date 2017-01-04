@@ -1,0 +1,7 @@
+RewriteEngine On
+RewriteBase /infaktura/
+RewriteRule ^admin.*$ /public/index.php?type=admin [L,QSA]
+RewriteRule ^partner.*$ /public/index.php?type=partner [L,QSA]
+RewriteRule ^customer.*$ /public/index.php?type=customer [L,QSA]   
+RewriteRule ^([^/]*.*)/customer.*$ /public/index.php?type=customer&location=$1 [L,QSA]
+ 
